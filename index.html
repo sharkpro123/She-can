@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>She Can Foundation | Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card" aria-labelledby="page-title">
+        <p class="eyebrow">She Can Foundation</p>
+        <h1 id="page-title">Connect with us</h1>
+        <p class="subtitle">
+          Share your name, email, and message. This demo shows a success state on submit.
+        </p>
+        <p class="admin-entry">
+          Need to review responses? <a href="/admin.html">Open admin dashboard</a>
+        </p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="Enter your email" required />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message"
+            required
+          ></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+
+        <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+  </body>
+</html>

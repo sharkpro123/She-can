@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>She Can Foundation | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="admin.js"></script>
+  </head>
+  <body>
+    <main class="page-shell admin-shell">
+      <section class="hero-card admin-card" aria-labelledby="admin-title">
+        <div class="admin-head">
+          <div>
+            <p class="eyebrow">She Can Foundation</p>
+            <h1 id="admin-title">Admin Dashboard</h1>
+            <p class="subtitle">Review form submissions stored in the database.</p>
+          </div>
+          <a class="admin-link" href="/">Back to form</a>
+        </div>
+
+        <form id="admin-auth" class="admin-auth" novalidate>
+          <label for="admin-key">Admin key</label>
+          <div class="admin-auth-row">
+            <input
+              id="admin-key"
+              name="admin-key"
+              type="password"
+              placeholder="Enter admin key"
+              autocomplete="current-password"
+              required
+            />
+            <button type="submit">Unlock</button>
+          </div>
+        </form>
+
+        <p id="admin-status" class="status-message" role="status" aria-live="polite"></p>
+
+        <section id="admin-panel" class="admin-panel hidden" aria-label="Submissions list">
+          <div class="panel-actions">
+            <button id="refresh-btn" type="button">Refresh</button>
+            <button id="logout-btn" type="button" class="secondary">Log out</button>
+          </div>
+          <div id="submissions-container" class="submissions-container"></div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

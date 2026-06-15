@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: she-can-r1
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: DB_PATH
+        value: /var/data/submissions.db
+    disk:
+      name: she-can-data
+      mountPath: /var/data
+      sizeGB: 1
