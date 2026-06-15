@@ -1,0 +1,12 @@
+{
+  "name": "she-can-foundation-form",
+  "version": "1.0.0",
+  "description": "A simple full-stack contact form for She Can Foundation.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
+}
